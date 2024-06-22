@@ -20,49 +20,49 @@ class RockPaperScissors:
         if choice_game == 1:
             while self.player1 < game_rounds and self.player2 < game_rounds:
                 print("\nPlayer 1 Turns")
-                player1 = str(input("Rock Paper Scissors => ")).lower()
+                player1 = str(input("Rock Paper Scissors => "))
                 print("\nPlayer 2 Turns")
-                player2 = str(input("Rock Paper Scissors => ")).lower()
+                player2 = str(input("Rock Paper Scissors => "))
                 
                 if player1 == player2:
                     print("\nIt's a tie")
                 elif player1 == "Q" or  player1 == "q" and  player2 == "Q" or player2 == "q":
                     print("\nThank you for playing")
                     break
-                elif player1 == "rock":
-                    if player2 == "paper":
+                elif player1 == "Rock" or player1 == "rock":
+                    if player1 == "Paper" or player2 == "paper":
                         print("\nPlayer 2 Wins")
                         print("\nYou lose", player2, "crumbled", player1)
                         self.player2 += 1
                         print("\nScores")
                         print(self.player1, "VS", self.player2)
-                    elif player2 == "scissors":
+                    elif player2 == "Scissors" or player2 == "scissors":
                         print("\nPlayer 1 Wins")
                         print("\nYou win", player1, "smashed", player2)
                         self.player1 += 1
                         print("\nScores")
                         print(self.player1, "VS", self.player2)
-                elif player1 == "paper":
-                    if player2 == "scissors":
+                elif player1 == "Paper" or player1 == "paper":
+                    if player2 == "Scissors" or player2 == "scissors":
                         print("\nPlayer 2 Wins")
                         print("You lose", player2, "cuts", player1)
                         self.player2 += 1
                         print("\nScores")
                         print(self.player1, "VS", self.player2)
-                    elif player2 == "rock":
+                    elif player2 == "Rock" or player2 == "rock":
                         print("\nPlayer 1 Wins\n")
                         print("You win", player1, "crumbled", player2)
                         self.player1 += 1
                         print("Scores\n")
                         print(self.player1, "VS", self.player2)
-                elif player1 == "scissors":
-                    if player2 == "rock":
+                elif player1 == "Scissors" or player1 == "scissors":
+                    if player2 == "Rock" or player2 == "rock":
                         print("\nPlayer 2 Wins")
                         print("You lose", player2, "smashed", player1)
                         self.player2 += 1
                         print("\nScores")
                         print(self.player1, "VS", self.player2)
-                    elif player2 == "paper":
+                    elif player2 == "Paper" or player2 == "paper":
                         print("\nPlayer 1 Wins")
                         print("You win", player1, "cuts", player2)
                         self.player1 += 1
@@ -97,6 +97,7 @@ class RockPaperScissors:
                         print("\nScores")
                         print(self.player1, "VS", self.computer)
                     elif random_choose == "Scissors":
+                        print("\nPlayer 1 Wins")
                         print("\nYou win", player, "smashed", random_choose)
                         self.player1 += 1
                         print("\nScores")
@@ -109,6 +110,7 @@ class RockPaperScissors:
                         print("\nScores")
                         print(self.player1, "VS", self.computer)
                     elif random_choose == "Rock":
+                        print("\nPlayer 1 Wins")
                         print("\nYou win", player, "crumbled", random_choose)
                         self.player1 += 1
                         print("\nScores\n")
@@ -121,6 +123,7 @@ class RockPaperScissors:
                             print("\nScores")
                             print(self.player1, "VS", self.computer)
                         elif random_choose == "Paper":
+                            print("\nPlayer 1 Wins")
                             print("\nYou win", player, "cuts", random_choose)
                             self.player1 += 1
                             print("\nScores")
@@ -133,6 +136,6 @@ class RockPaperScissors:
 class Main:
     def __init__(self):
         RockPaperScissors()
-        
+
 if __name__ == "__main__":
     Main()
